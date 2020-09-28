@@ -7,16 +7,15 @@ using System.Text;
 namespace Hemobanco.Models
 {
     [Table("Doadores")]
-    class Doador
+    class Doador : Pessoa
     {
-        [Key]
-        private int DoadorId;
-        private string Nome { get; set; }
-        private string CPF { get; set; }
-        private string Email { get; set; }
-        private int Idade { get; set; }
-        private string Endereco { get; set; }
-        private string Telefone { get; set; }
-        private Sangue sangue;
+        public int Idade { get; set; }
+        public string Endereco { get; set; }
+        public string Telefone { get; set; }
+
+        public override string ToString()
+        {
+            return String.Format("{0}, CPF: {1};",Nome,CPF);
+        }
     }
 }

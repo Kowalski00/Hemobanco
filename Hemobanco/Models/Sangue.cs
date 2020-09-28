@@ -10,7 +10,7 @@ namespace Hemobanco.Models
     class Sangue
     {
         [Key]
-        private int SangueId;
-        private string SangueTipo { get; set; }
+        public int SangueId { get; set; }
+        public string SangueTipo { get; set; }
     }
 }

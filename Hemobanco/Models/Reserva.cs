@@ -10,11 +10,11 @@ namespace Hemobanco.Models
     class Reserva
     {
         [Key]
-        private int ReservaId;
-        private Sangue sangue { get; set; }
-        private int Quantidade { get; set; }
-        private Funcionario Func { get; set; }
-        private DateTime CriadoEm { get; set; }
-        private String Status { get; set; }
+        public int ReservaId { get; set; }
+        public Sangue sangue { get; set; }
+        public int Quantidade { get; set; }
+        public Funcionario Func { get; set; }
+        public DateTime CriadoEm { get; set; }
+        public String Status { get; set; }
     }
 }

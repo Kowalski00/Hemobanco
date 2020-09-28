@@ -6,7 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DAO\" />
+    <Compile Remove="Migrations\20200921222609_CriarBanco.cs" />
+    <Compile Remove="Migrations\20200921222609_CriarBanco.Designer.cs" />
+    <Compile Remove="Migrations\20200921223852_CriarBanco.cs" />
+    <Compile Remove="Migrations\20200921223852_CriarBanco.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

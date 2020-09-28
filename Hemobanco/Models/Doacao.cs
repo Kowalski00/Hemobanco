@@ -10,9 +10,11 @@ namespace Hemobanco.Models
     class Doacao
     {
         [Key]
-        private int DoacaoId { get; set; }
-        private Doador doacao;
-        private double QtdSangue { get; set; }
-        private DateTime CriadoEm { get; set; }
+        public int DoacaoId { get; set; }
+        public Doador Doador { get; set; }
+        public double QtdSangue { get; set; }
+
+        public Sangue Sangue { get; set; }
+        public DateTime RealizadoEm { get; set; }
     }
 }

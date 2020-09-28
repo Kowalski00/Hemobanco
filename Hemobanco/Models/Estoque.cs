@@ -10,11 +10,11 @@ namespace Hemobanco.Models
     class Estoque
     {
         [Key]
-        private int EstoqueId;
-        private Sangue sangue { get; set; }
-        private int Quantidade { get; set; }
-        private Funcionario Func { get; set; }
-        private DateTime ArmazenadoEm { get; set; }
+        public int EstoqueId { get; set; }
+        public Sangue sangue { get; set; }
+        public int Quantidade { get; set; }
+        public Funcionario Func { get; set; }
+        public DateTime ArmazenadoEm { get; set; }
     }
 
 }

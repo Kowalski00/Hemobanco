@@ -7,13 +7,7 @@ using System.Text;
 namespace Hemobanco.Models
 {
     [Table("Funcionarios")]
-    class Funcionario
+    class Funcionario : Pessoa
     {
-        [Key]
-        private int FuncId;
-        private String Nome { get; set; }
-        private String Cpf { get; set; }
-        private String Email { get; set; }
-
     }
 }
