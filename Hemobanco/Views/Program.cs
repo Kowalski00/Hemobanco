@@ -18,7 +18,7 @@ namespace Hemobanco.Views
                 Console.WriteLine("[]======================================[]\n");
 
                 Console.WriteLine("\nMenu");
-                Console.WriteLine(" 1- Cadastrar Doador\n 2- Alterar Doador\n 3- Excluir Doador\n 4- Listar Doadores\n 5- Realizar Doação\n 6- Listar Doações\n 7- Procurar Compatíveis\n 8- Realizar Reserva\n 9- Listar Qtde de Sangue\n 0- Sair\n");
+                Console.WriteLine(" 1- Cadastrar Doador\n 2- Alterar Doador\n 3- Excluir Doador\n 4- Listar Doadores\n 5- Realizar Doação\n 6- Listar Doações\n 7- Cadastrar Funcionário\n 8- Listar Funcionários\n 9- Listar Qtde de Sangue\n 0- Sair\n");
                 Console.Write("Selecione uma opção: ");
                 op = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
@@ -28,7 +28,7 @@ namespace Hemobanco.Views
                         CadastroDoador.Renderizar();
                         break;
                     case 2:
-                        //ListarDoador.Renderizar();
+                        //RealizarDoacao.Renderizar();
                         break;
                     case 3:
                         //LisPessoa.RenderizarEmail();
@@ -37,21 +37,16 @@ namespace Hemobanco.Views
                         ListarDoador.Renderizar();
                         break;
                     case 5:
-                        Console.WriteLine("[]-- Teste de Query de Doacoes --[]");
-                        Console.WriteLine("Buscar por cpf:");
-                        string cpf2 = Console.ReadLine();
-                        Doador d = DAO.DoadorDAO.BuscaPorCPF(cpf2);
-                        DateTime recente = DAO.DoacaoDAO.BuscarUltimaDoacao(d);
-                        Console.WriteLine(recente);
+                        CadastrarDoacao.Renderizar();
                         break;
                     case 6:
                         //LisProduto.Renderizar();
                         break;
                     case 7:
-                        //CadVenda.Renderizar();
+                        CadastrarFuncionario.Renderizar();
                         break;
                     case 8:
-                        //LisVenda.Renderizar(VendaDAO.retLisVen()); ;
+                        ListarFuncionario.Renderizar();
                         break;
                     case 9:
                         Console.Write("[]-- Digite um cpf: ");

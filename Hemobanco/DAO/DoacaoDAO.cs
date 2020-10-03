@@ -19,7 +19,7 @@ namespace Hemobanco.DAO
             {
                 Doacao ultimaDoacao = BuscarPorUltimaRealizada(d.Doador.CPF);
                 DateTime atual = DateTime.Now;
-                if (atual.Day - ultimaDoacao.RealizadoEm.Day >= 60)
+                if (atual.Month - ultimaDoacao.RealizadoEm.Month > 2)
                 {
                     _context.Doacoes.Add(d);
                     _context.SaveChanges();

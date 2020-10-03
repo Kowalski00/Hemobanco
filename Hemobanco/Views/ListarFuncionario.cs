@@ -12,7 +12,7 @@ namespace Hemobanco.Views
             int op;
             do
             {
-                Console.WriteLine("[]-- Listagem de Funcionários --[]");
+                Console.WriteLine("\n[]-- Listagem de Funcionários --[]");
                 Console.WriteLine("\nOpções: 1 - Listar Todos Funcionários; 2 - Buscar por CPF; 3 - Buscar por Email; 0 - Sair;");
                 Console.WriteLine("Digite sua opção: ");
                 op = Convert.ToInt32(Console.ReadLine());
@@ -20,10 +20,12 @@ namespace Hemobanco.Views
                 switch (op)
                 {
                     case 1:
-                        Console.WriteLine("[]-- Doadores: ");
-                        foreach (Funcionario fun in DAO.FuncionarioDAO.ListarTodos())
+                        Console.WriteLine("\n[]-- Funcionarios: ");
+                        Console.WriteLine("[]---------------------------------------[]");
+                        List<Funcionario> lst = DAO.FuncionarioDAO.ListarTodos();
+                        foreach (Funcionario fun in lst)
                         {
-                            fun.ToString();
+                            Console.WriteLine("    " + fun.ToString());
                         }
                         Console.WriteLine("[]---------------------------------------[]");
                         break;

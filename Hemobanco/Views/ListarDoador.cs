@@ -11,17 +11,19 @@ namespace Hemobanco.Views
             int op;
             do
             {
-                Console.WriteLine("[]-- Listagem de Doadores --[]");
+                Console.WriteLine("\n[]-- Listagem de Doadores --[]");
                 Console.WriteLine("\nOpções: 1 - Listar Todos Doadores; 2 - Buscar por CPF; 3 - Buscar por Email; 0 - Sair;");
                 Console.WriteLine("Digite sua opção: ");
                 op = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
                 switch (op) {
                     case 1:
-                        Console.WriteLine("[]-- Doadores: ");
-                        foreach (Doador doador in DAO.DoadorDAO.ListarTodos())
+                        Console.WriteLine("\n[]-- Doadores: ");
+                        Console.WriteLine("[]---------------------------------------[]");
+                        List<Doador> lst = DAO.DoadorDAO.ListarTodos();
+                        foreach (Doador doador in lst)
                         {
-                            doador.ToString();
+                            Console.WriteLine("    "+doador.ToString());
                         }
                         Console.WriteLine("[]---------------------------------------[]");
                         break;

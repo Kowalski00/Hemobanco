@@ -16,5 +16,7 @@ namespace Hemobanco.Models
 
         public Sangue Sangue { get; set; }
         public DateTime RealizadoEm { get; set; }
+
+        public Doacao() => RealizadoEm = DateTime.Now;
     }
 }

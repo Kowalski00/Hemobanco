@@ -9,7 +9,7 @@ namespace Hemobanco.DAO
     class FuncionarioDAO : BaseDAO
     {
         public static void Cadastrar(Funcionario f) {
-            if (BuscarPorCPF(f.CPF) != null)
+            if (BuscarPorCPF(f.CPF) == null)
             {
                 _context.Funcionarios.Add(f);
                 _context.SaveChanges();
